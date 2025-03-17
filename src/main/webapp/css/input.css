@@ -1,0 +1,344 @@
+/*
+Some common styling that we pull in to "theme" the views.
+*/
+p {
+	font-style: italic;
+}
+
+.headlabel {
+	display: block;
+	font-size: 2em;
+	margin-block-start: 0.67em;
+	margin-block-end: 0.27em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	font-weight: bold;
+}
+
+/* anything with the "bigletters" class will have big green text */
+.bigletters {
+	font-size: 32px;
+	font-weight: bold;
+	color: green;
+}
+
+/* anything with the "error" class will be dark red */
+.error {
+	color: darkred;
+}
+
+#container {
+	margin: 0px auto;
+	width: 800px;
+	text-align: center;
+}
+
+#rp-table {
+	width: 800px;
+	border: 1px solid #aaa;
+}
+
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+td, th {
+	border: 1px solid #722408;
+	text-align: left;
+	padding: 3px;
+}
+
+tr:nth-child(even) {
+	background-color: #ECF0F3;
+}
+
+h1, h2 {
+	text-align: center;
+}
+
+h4 {
+	font-weight: bold;
+}
+
+.gfg {
+	text-align: right;
+	font-weight: bold;
+}
+
+.gfg2 {
+	font-weight: bold;
+	text-align: center;
+}
+
+.download-btn {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #0c74a9;
+	color: #FFFFFF;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	text-decoration: none;
+	transition: background-color 0.3s ease;
+	position: relative;
+	overflow: hidden;
+}
+
+.Test-btn {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #0c74a9;
+	color: #FFFFFF;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	text-decoration: none;
+	transition: background-color 0.3s ease;
+	position: relative;
+	overflow: hidden;
+}
+
+.Skip-btn {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #0c74a9;
+	color: #FFFFFF;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	text-decoration: none;
+	transition: background-color 0.3s ease;
+	position: relative;
+	overflow: hidden;
+}
+
+.download-btn:hover {
+	background-color: #DEDEDE;
+	color: #000000;
+}
+
+.download-icon {
+	margin-right: 5px;
+}
+
+.download-btn::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.3);
+	transform: translateX(-50%) scaleX(0);
+	transition: transform 0.5s ease-in-out;
+	z-index: 1;
+}
+
+.download-btn:hover::after {
+	transform: translateX(-50%) scaleX(1);
+}
+
+input {
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	padding-left: 5px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #1280b1;
+	border-radius: 6px;
+	width: 210px;
+	height: 21px;
+	box-shadow: 10px 10px 10px rgba( 136, 136, 136, 0.3);
+}
+
+.button_submit {
+	display: block;
+	margin: 0 auto;
+	font-weight: bold;
+}
+
+.linnk_button {
+	margin: 5px auto;
+	text-decoration: none;
+	padding: 10px 20px;
+	border-radius: 8px;
+	font-family: Monospace;
+	text-align: center;
+	color: white;
+	background-color: #0c74a9;
+}
+
+.line_div {
+	display: inline-block;
+	width: 87%;
+	height: 21px;
+	unicode-bidi: normal;
+}
+
+#tdidl {
+	border: none;
+	text-align: left;
+	padding: 0px;
+	text-align: left;
+	width: 0%;
+}
+
+#tdidcenter {
+	border: none;
+	text-align: center;
+	padding: 0px;
+	width: 0%;
+}
+
+#button_top {
+	
+}
+
+#tdidr {
+	border: none;
+	text-align: left;
+	padding: 0px;
+	text-align: right;
+	width: 100%;
+}
+
+.disable_button {
+	margin: 5px auto;
+	text-decoration: none;
+	padding: 5px 5px;
+	border-radius: 8px;
+	text-align: center;
+	color: white;
+	background-color: #c3c4c4;
+}
+
+#submit_button {
+	text-decoration: none;
+	padding: 5px 5px;
+	border-radius: 8px;
+	font-family: Monospace;
+	background-color: #0c74a9;
+	text-align: center;
+	height: 30px;
+	color: white;
+}
+
+#add_button {
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	padding: 3px 5px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #0c74a9;
+	background-color: #3085ab;
+	border-radius: 6px;
+	height: 21px;
+	width: auto;
+	color: white;
+	box-shadow: 10px 10px 10px rgba(136, 136, 136, 0.3);
+}
+
+#deleteRp {
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	padding: 3px 5px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #0c74a9;
+	background-color: #3085ab;
+	border-radius: 6px;
+	height: 21px;
+	width: auto;
+	color: white;
+	box-shadow: 10px 10px 10px rgba(136, 136, 136, 0.3);
+}
+
+* Create three unequal columns that floats next to each other * /
+.column {
+	float: left;
+	padding: 10px;
+	height: 120px; /* Should be removed. Only for demonstration */
+}
+
+.adelogo, .ibmlogo {
+	width: 25%;
+	background: #CED0C2;
+}
+
+.ibmlogo {
+	width: 25%;
+}
+
+.banner {
+	width: 50%;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.imagesize {
+	width: 25%
+}
+
+.adelog {
+	float: left;
+	box-sizing: border-box;
+}
+
+.ibmlog {
+	float: left;
+	box-sizing: border-box;
+    background-image: url(/configwebapp/resources/css//line_resize.jpg);
+}
+
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+	text-align: center;
+}
+
+.banertext {
+
+	background: #CED0C2;
+}
+
+#banner_table {
+	border: none;
+	text-align: center;
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#bannertd {
+	border: none;
+	text-align: center;
+	padding-left: 115px;
+	width: 0%;
+}
+
+.div_backgrndimg
+{
+background-repeat: repeat;
+    float: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    height: 93px;
+    background-image: url(/configwebapp/resources/css//line_resize.jpg);
+    width: 564px;
+}
