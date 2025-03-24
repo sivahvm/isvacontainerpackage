@@ -16,8 +16,6 @@
  */
 package com.ibm.ivia.config.model;
 
-import java.util.List;
-
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
@@ -36,7 +34,7 @@ public class ConfigValidator implements Validator {
 	 * @see org.springframework.validation.Validator#supports(java.lang.Class)
 	 */
 	public boolean supports(Class<?> clazz) {
-		return EnvConfig.class.isAssignableFrom(clazz);
+		return RequestConfig.class.isAssignableFrom(clazz);
 	}
 
 	/*
@@ -48,50 +46,29 @@ public class ConfigValidator implements Validator {
 	public void validate(Object target, Errors errors) {
 		
 		// Spring uses a little magic here to check the target for its specific attributes.
-		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "lmiIp", "field.required", "LMI IP address field cannot be empty");
+		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "ipaddress", "field.required", "LMI IP address field cannot be empty");
+		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "host",  "field.required", "Persistent Volume label  field cannot be empty");
+		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "repoUrl",  "field.required", "containerType field cannot be empty");
+
 	}
 	
-public void validateLdap(Object target, Errors errors) {
+public void validateLmi(Object target, Errors errors) {
 		
 		// Spring uses a little magic here to check the target for its specific attributes.
-		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "ldapDomain", "field.required", "Ldap Domain Name  field cannot be empty");
+		/*
+		 * ValidationUtils.rejectIfEmptyOrWhitespace(errors, "ipaddress",
+		 * "field.required", "*"); ValidationUtils.rejectIfEmptyOrWhitespace(errors,
+		 * "hostname", "field.required", "*");
+		 * ValidationUtils.rejectIfEmptyOrWhitespace(errors, "repoUrl",
+		 * "field.required", "*"); ValidationUtils.rejectIfEmptyOrWhitespace(errors,
+		 * "imageVersion", "field.required", "*");
+		 * ValidationUtils.rejectIfEmptyOrWhitespace(errors, "network",
+		 * "field.required", "*");
+		 */
 		
 
+
 	}
-public void rpValidate(Object target,List<RPConf> listObj, Errors errors) {
-	
-	// Spring uses a little magic here to check the target for its specific attributes.
-	RPConf reqBean=(RPConf)target;
-	ValidationUtils.rejectIfEmptyOrWhitespace(errors, "rpIp", "field.required", "Web Reverse Proxy IP address field cannot be empty");
-if(null!=listObj && listObj.size()!=0) {
-	for (RPConf rpConf : listObj) {
-		System.out.println("Session:::::::"+rpConf.toString());
-		System.out.println("B:::::::"+reqBean.toString());
-
-		if(rpConf.getRpIp().equals(reqBean.getRpIp())) {
-			ValidationUtils.invokeValidator(null, listObj, errors);
-			
-			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "rpIp", "field.duplicate", "Web Reverse Proxy IP address already added");
-
-		}else if(rpConf.getRpInstanceName().equals(reqBean.getRpInstanceName())) {
-			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "rpInstanceName", "field.duplicate", "Instance name already added");
-
-		}else if(rpConf.getRphostname().equals(reqBean.getRphostname())) {
-			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "rphostname", "field.duplicate", "rphostname name already added");
-
-		}else if(rpConf.getRppodlabel().equals(reqBean.getRppodlabel())) {
-			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "rppodlabel", "field.duplicate", "rppodlabel name already added");
-
-		}
-	}
-	}
-	
-
-}
-
-
-
-
 	
 
 }

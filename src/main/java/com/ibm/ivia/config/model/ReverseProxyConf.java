@@ -4,35 +4,28 @@ import java.util.List;
 
 public class ReverseProxyConf {
 
-	private List<RPConf> rpConf;
-	private String rpRepUrl;
-	private String rpV;
-	private String deleteRp;
-	
-	public String getDeleteRp() {
-		return deleteRp;
-	}
-	public void setDeleteRp(String deleteRp) {
-		this.deleteRp = deleteRp;
-	}
-	public List<RPConf> getRpConf() {
+	private List<RequestConfig> rpConf;
+	private String repoUrl;
+	private String imageVersion;
+	public List<RequestConfig> getRpConf() {
 		return rpConf;
 	}
-	public void setRpConf(List<RPConf> rpConf) {
+	public void setRpConf(List<RequestConfig> rpConf) {
 		this.rpConf = rpConf;
 	}
-	public String getRpRepUrl() {
-		return rpRepUrl;
+	public String getRepoUrl() {
+		return repoUrl;
 	}
-	public void setRpRepUrl(String rpRepUrl) {
-		this.rpRepUrl = rpRepUrl;
+	public void setRepoUrl(String repoUrl) {
+		this.repoUrl = repoUrl;
 	}
-	public String getRpV() {
-		return rpV;
+	public String getImageVersion() {
+		return imageVersion;
 	}
-	public void setRpV(String rpV) {
-		this.rpV = rpV;
+	public void setImageVersion(String imageVersion) {
+		this.imageVersion = imageVersion;
 	}
+	
 	
 	
 }

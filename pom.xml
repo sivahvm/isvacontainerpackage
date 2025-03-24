@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.ibm.ivia.config</groupId>
-	<artifactId>configwebapp</artifactId>
+	<artifactId>iviacontainerdep</artifactId>
 	<version>1</version>
 	<packaging>war</packaging>
 
-	<name>docker configwebapp</name>
-	<description>configwebapp</description>
+	<name>docker iviacontainerdep</name>
+	<description>iviacontainerdep</description>
 
 
 	<!-- Define some properties for use in the pom -->
@@ -80,13 +80,29 @@
 			<version>${org.slf4j.version}</version>
 			<scope>runtime</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.yaml/snakeyaml -->
+		<dependency>
+		    <groupId>org.yaml</groupId>
+		    <artifactId>snakeyaml</artifactId>
+		    <version>2.4</version>
+		</dependency>
+<dependency>
+    <groupId>com.fasterxml.jackson.dataformat</groupId>
+    <artifactId>jackson-dataformat-yaml</artifactId>
+    <version>2.10.3</version>
+</dependency>
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.10.3</version>
+</dependency>
 	</dependencies>
 
 	<!--
         Maven build(compile) instructions go here in the form of plugins
     -->
 	<build>
-		<finalName>configwebapp</finalName>
+		<finalName>iviacontainerdep</finalName>
 		<plugins>
 			<plugin>
 				<!-- Plugin to tell maven what version of java to use -->
